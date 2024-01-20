@@ -1,0 +1,179 @@
+[file:///etc/default/grub]
+Bookmarks=
+Checksum=01bbd07c904a8e82ad4d4f6ba59a0f6c615d1004
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2024,1,2,9,33,31.951
+URL=file:///etc/default/grub
+
+[file:///etc/default/grub.save]
+Bookmarks=
+Checksum=01bbd07c904a8e82ad4d4f6ba59a0f6c615d1004
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2024,1,2,9,33,34.735
+URL=file:///etc/default/grub.save
+
+[file:///home/baley/.bashrc]
+Bookmarks=
+Checksum=1ba24da61dde805e4537fb608c0523becd988392
+Encoding=UTF-8
+Highlighting=Bash
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Bash
+Mode Set By User=false
+Time=2024,1,9,10,12,29.574
+URL=file:///home/baley/.bashrc
+
+[file:///home/baley/.config/neofetch/config.conf]
+Bookmarks=
+Checksum=cdba4c6630d13921d8b0ce40b325c7c4879b09ba
+Encoding=UTF-8
+Highlighting=TOML
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=TOML
+Mode Set By User=false
+Time=2024,1,8,10,35,27.616
+URL=file:///home/baley/.config/neofetch/config.conf
+
+[file:///home/baley/.emacs]
+Bookmarks=
+Checksum=77be5ca4235fcdd051d638b6a720d99aedd740f9
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2024,1,10,5,23,29.448
+URL=file:///home/baley/.emacs
+
+[file:///home/baley/.emacs-custom]
+Bookmarks=
+Checksum=43c70e09d0947c4a773ff9de92ced2573f09a6ff
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2024,1,10,5,22,58.694
+URL=file:///home/baley/.emacs-custom
+
+[file:///home/baley/.gnu-emacs-custom]
+Bookmarks=
+Checksum=03ffc19987fcf0ccf9b53aaeaed891f7f39d9fbc
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2024,1,9,9,46,52.947
+URL=file:///home/baley/.gnu-emacs-custom
+
+[file:///home/baley/Downloads/sudo-edit-20220801.1317/sudo-edit-pkg.el]
+Bookmarks=
+Checksum=c006404d8e6dc8588f7550d8eb3dac40377b2719
+Encoding=UTF-8
+Highlighting=Common Lisp
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Common Lisp
+Mode Set By User=false
+Time=2024,1,8,7,5,28.854
+URL=file:///home/baley/Downloads/sudo-edit-20220801.1317/sudo-edit-pkg.el
+
+[file:///home/baley/Downloads/sudo-edit-20220801.1317/sudo-edit.el]
+Bookmarks=
+Checksum=4202114d2658d7e292d9c7452d68b7aaf24529bb
+Encoding=UTF-8
+Highlighting=Common Lisp
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Common Lisp
+Mode Set By User=false
+Time=2024,1,8,7,5,32.835
+URL=file:///home/baley/Downloads/sudo-edit-20220801.1317/sudo-edit.el
+
+[file:///home/baley/Downloads/tablet-mode/build/lib/tabletmode/config.py]
+Bookmarks=
+Checksum=8c6c928328deaa88aafa2af6e16a224d170d9da0
+Encoding=UTF-8
+Highlighting=Python
+Highlighting Set By User=false
+Indentation Mode=python
+Mode=Python
+Mode Set By User=false
+Time=2024,1,4,4,44,24.542
+URL=file:///home/baley/Downloads/tablet-mode/build/lib/tabletmode/config.py
+
+[file:///home/baley/Emacs backup/.emacs]
+Bookmarks=
+Checksum=8a06a77bbf8d0cf680d29ca312a6ce10cfffda3d
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2024,1,9,10,14,27.055
+URL=file:///home/baley/Emacs backup/.emacs
+
+[file:///home/baley/Emacs backup/.gnu-emacs-custom]
+Bookmarks=
+Checksum=03ffc19987fcf0ccf9b53aaeaed891f7f39d9fbc
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Mode Set By User=false
+Time=2024,1,9,10,13,30.617
+URL=file:///home/baley/Emacs backup/.gnu-emacs-custom
+
+[file:///home/baley/RyzenAdj/start.sh]
+Bookmarks=
+Checksum=7b9c45b0c9edf06cf0731f6229a2a43bf7841d0d
+Encoding=UTF-8
+Highlighting=Bash
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Bash
+Mode Set By User=false
+Time=2024,1,4,4,24,10.155
+URL=file:///home/baley/RyzenAdj/start.sh
+
+[file:///usr/share/applications/ryzen-controller.desktop]
+Bookmarks=
+Checksum=f724ce3fea659b29aa167b750e643b3b9c5e3c9f
+Encoding=UTF-8
+Highlighting=.desktop
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=.desktop
+Mode Set By User=false
+Time=2024,1,4,3,30,17.728
+URL=file:///usr/share/applications/ryzen-controller.desktop
+
+[file:///usr/share/applications/xfce4-terminal-settings.desktop]
+Bookmarks=
+Checksum=416d94d6ad63208db9b956f6763663485c8e330a
+Encoding=UTF-8
+Highlighting=.desktop
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=.desktop
+Mode Set By User=false
+Time=2024,1,4,5,46,7.046
+URL=file:///usr/share/applications/xfce4-terminal-settings.desktop

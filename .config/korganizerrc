@@ -1,0 +1,18 @@
+[Calendar]
+Default Calendar=-1
+
+[Internal Settings]
+DefaultResourceColorSeed=2
+
+[Migratekde4]
+Version=1
+
+[Timescale]
+Timescale Timezones=
+
+[TodoTreeViewStateS]
+Current=x-1
+Expansion=
+HorizontalScroll=0
+Selection=
+VerticalScroll=0

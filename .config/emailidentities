@@ -1,0 +1,13 @@
+[General]
+Default Identity=1379473273
+
+[Identity #0]
+Default Domain=localhost.localdomain
+Disable Fcc=false
+Identity=baley
+Image Location=
+Inline Signature=
+Name=baley
+Override Encryption Defaults=false
+Signature Enabled=false
+uoid=1379473273

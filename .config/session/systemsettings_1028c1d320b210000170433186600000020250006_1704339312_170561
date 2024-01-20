@@ -1,0 +1,11 @@
+[Number]
+NumberOfWindows=1
+
+[WindowProperties1]
+1920x1200 screen: XPosition=450
+1920x1200 screen: YPosition=242
+ClassName=SettingsBase
+MenuBar=Disabled
+ObjectName=MainWindow#1
+State=AAAA/wAAAAD9AAAAAAAAA/wAAAKOAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+eDP-1=eDP-1

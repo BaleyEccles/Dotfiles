@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Settings
+Comment=Make your ASUS ROG Laptop go Brrrrr!
+Exec=rog-control-center
+Icon=rog-control-center
+Name=ROG Control Center
+Terminal=false
+Type=Application
+Version=1.0

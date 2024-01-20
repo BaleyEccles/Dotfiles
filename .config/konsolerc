@@ -1,0 +1,20 @@
+[Desktop Entry]
+DefaultProfile=emacs.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+1920x1200 screen: Height=440
+1920x1200 screen: Width=800
+1920x1200 screen: Window-Maximized=true
+1920x1200 screen: XPosition=926
+1920x1200 screen: YPosition=575
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAA/////wAAAXwBAAAD+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAAAD/////AAABFQEAAAMAAAeAAAAEYwAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAQAAAOj/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+eDP-1=eDP-1
+eDP-2=eDP-2
+
+[UiSettings]
+ColorScheme=

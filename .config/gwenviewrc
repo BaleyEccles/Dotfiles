@@ -1,0 +1,36 @@
+[$Version]
+update_info=gwenview.upd:SideBar_StatusBar_Rename,gwenview.upd:ImageView_AlphaBackgroundMode_Update,gwenview.upd:DeleteThumbnailSetting_Rename
+
+[General]
+LastUsedVersion=210800
+
+[MainWindow]
+1920x1200 screen: Window-Maximized=true
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAA7QAAAIPAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/Pictures/y13BqpO-suse-linux-wallpaper.jpg
+File10[$e]=$HOME/Pictures/wp3004460-wallpaper-full-hd-opensuse.png
+File2[$e]=$HOME/Pictures/123.webp
+File3[$e]=$HOME/Pictures/JE8nmVJ-opensuse-wallpapers.jpg
+File4[$e]=$HOME/Pictures/wallpaper.jpg
+File5[$e]=$HOME/Pictures/wp3004383-wallpaper-full-hd-opensuse.png
+File6[$e]=$HOME/Pictures/wp3004379-wallpaper-full-hd-opensuse.jpg
+File7[$e]=$HOME/Pictures/wp3004368-wallpaper-full-hd-opensuse.jpg
+File8[$e]=$HOME/Pictures/wp3004386-wallpaper-full-hd-opensuse.png
+File9[$e]=$HOME/Pictures/SUSEwall1.png
+Name1[$e]=y13BqpO-suse-linux-wallpaper.jpg
+Name10[$e]=wp3004460-wallpaper-full-hd-opensuse.png
+Name2[$e]=123.webp
+Name3[$e]=JE8nmVJ-opensuse-wallpapers.jpg
+Name4[$e]=wallpaper.jpg
+Name5[$e]=wp3004383-wallpaper-full-hd-opensuse.png
+Name6[$e]=wp3004379-wallpaper-full-hd-opensuse.jpg
+Name7[$e]=wp3004368-wallpaper-full-hd-opensuse.jpg
+Name8[$e]=wp3004386-wallpaper-full-hd-opensuse.png
+Name9[$e]=SUSEwall1.png
+
+[SideBar]
+InformationSplitterSizes=212,243

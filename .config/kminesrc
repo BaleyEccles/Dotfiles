@@ -1,0 +1,12 @@
+[KgDifficulty]
+Level=Easy
+
+[KgTheme]
+Theme=themes/default.desktop
+
+[MainWindow]
+1920x1200 screen: XPosition=576
+1920x1200 screen: YPosition=374
+State=AAAA/wAAAAD9AAAAAAAAAwAAAAFvAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+eDP-1=eDP-1

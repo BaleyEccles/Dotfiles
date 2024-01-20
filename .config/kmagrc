@@ -1,0 +1,20 @@
+[General Options]
+ColorIndex=0
+FPSIndex=2
+Geometry=1908,1158
+Mode=followmouse
+RotationIndex=0
+SelRect=1,0,954,543
+ShowMouse=2
+StaysOnTop=true
+ZoomIndex=4
+
+[MainWindow]
+1920x1200 screen: Height=390
+1920x1200 screen: Width=460
+1920x1200 screen: Window-Maximized=true
+1920x1200 screen: XPosition=730
+1920x1200 screen: YPosition=419
+State=AAAA/wAAAAD9AAAAAAAAB3QAAAQ9AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAFgB2AGkAZQB3AFQAbwBvAGwAQgBhAHIBAAAADP////8AAAAAAAAAAAAAAB4AcwBlAHQAdABpAG4AZwBzAFQAbwBvAGwAQgBhAHIBAAABwv////8AAAAAAAAAAA==
+ToolBarsMovable=Disabled
+eDP-1=eDP-1
