@@ -1,6 +1,6 @@
 {
     "default_protocol": "udp",
-    "killswitch": 2,
+    "killswitch": 0,
     "dns": {
         "dns_status": 1,
         "custom_dns": []
@@ -9,7 +9,7 @@
         "split_tunneling_status": 0,
         "ip_list": []
     },
-    "netshield": 2,
+    "netshield": 0,
     "secure_core": 0,
     "vpn_accelerator": 1,
     "alternative_routing": 1,

@@ -1,8 +1,5 @@
 [General]
-ColorScheme=DarkopenSUSEColor
+ColorScheme=BreezeLight
 
 [Icons]
-Theme=Breeze-openSUSE Dark Icons
-
-[KDE]
-widgetStyle=Breeze
+Theme=breeze

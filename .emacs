@@ -8,6 +8,9 @@
 ;; Theme(s) ;;
 (load-theme 'wheatgrass t)
 
+;; Font ;;
+(set-frame-font "IosevkaSS13" nil t)
+
 ;; Line Numbers ;;
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
