@@ -1,6 +1,6 @@
 [FlatpakSources]
-Sources=flathub
+Sources=\\0
 
 [Window]
-geometry=0,0,944,1184
+geometry=0,0,1904,1129
 visibility=4

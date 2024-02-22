@@ -11,17 +11,13 @@
     // Choose the order of the modules
     "modules-left":["custom/power", "custom/refreshrate", "backlight", "pulseaudio", "custom/zypper", "memory", "cpu", "temperature"],
     "modules-center": ["custom/media", "custom/launcher", "hyprland/workspaces", "wlr/taskbar"],
-    "modules-right":["custom/gpu_temp", "custom/gpu_usage", "battery", "battery#bat2", "network", "tray",  "clock"],
+    "modules-right":["custom/power", "battery", "battery#bat2", "network", "tray",  "clock"],
     // Modules configuration
 
-    "custom/zypper":{
-	"format": " {}",
-	"exec": "zypper lu | grep 'v |' | wc -l"
-    },
-
+    //need nvidia driver I cannot be bothered atm
     "custom/gpu_usage": {
         "tooltip": false,
-	"format": "{}% ",
+	"format": "1",
 	"interval": 10,
 	"exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv | grep -G [0-9] -o",
     	"exec-if": "exit 0"

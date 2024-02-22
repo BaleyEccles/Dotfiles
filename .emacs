@@ -9,7 +9,7 @@
 (load-theme 'wheatgrass t)
 
 ;; Font ;;
-(set-frame-font "IosevkaSS13" nil t)
+(set-frame-font "Iosevka" nil t)
 
 ;; Line Numbers ;;
 (setq display-line-numbers-type 'relative)
@@ -21,6 +21,7 @@
 ;; Packages ;;
 
 ;; auto-complete ;;
+(require 'auto-complete)
 (ac-config-default)
 
 ;; multiple-cursors ;;
