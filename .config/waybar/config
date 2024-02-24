@@ -9,7 +9,7 @@
     "margin-bottom":0,
 
     // Choose the order of the modules
-    "modules-left":["custom/power", "custom/refreshrate", "backlight", "pulseaudio", "custom/zypper", "memory", "cpu", "temperature"],
+    "modules-left":["custom/power", "custom/fan", "custom/refreshrate", "backlight", "pulseaudio", "custom/zypper", "memory", "cpu", "temperature"],
     "modules-center": ["custom/media", "custom/launcher", "hyprland/workspaces", "wlr/taskbar"],
     "modules-right":["custom/gpu_temp", "custom/gpu_usage", "battery", "battery#bat2", "network", "tray",  "clock"],
     // Modules configuration
@@ -29,7 +29,7 @@
 	"exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv | grep -G [0-9] -o | tr -d '\n'",
     	"exec-if": "exit 0"
     },
-    "custom/power": {
+    "custom/fan": {
         "tooltip": false,
 	"format": "{}",
 	"interval": 1,
@@ -37,6 +37,15 @@
     	"exec-if": "exit 0",
         "on-click": "asusctl profile -n"
 	},
+    "custom/power": {
+        "tooltip": false,
+	"format": "{}",
+	"interval": 1,
+	"exec": "cat ~/.config/hypr/.script_state | grep -E 'Balanced|Powersave|Performance' -o",
+    	"exec-if": "exit 0",
+        "on-click": "~/.config/hypr/cpupowerscript.sh"
+	},
+	
 	"custom/refreshrate": {
         "tooltip": false,
 	"format": "{} Hz",
