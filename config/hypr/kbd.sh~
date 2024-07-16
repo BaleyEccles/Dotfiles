@@ -1,0 +1,2 @@
+#!/bin/sh
+kill -SIGRTMIN $(pgrep wvkbd)

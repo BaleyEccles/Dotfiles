@@ -1,0 +1,177 @@
+
+{
+"gtk-layer-shell": true,
+"layer": "top",
+"position": "top",
+    "height": 10,
+    "spacing": 3,
+    "margin-top": 0,
+    "margin-bottom":0,
+
+    // Choose the order of the modules
+    "modules-left":["custom/fan", "custom/refreshrate", "backlight", "pulseaudio", "custom/zypper", "memory", "cpu", "temperature"],
+    "modules-center": ["custom/media", "custom/kbd", "custom/launcher", "hyprland/workspaces", "wlr/taskbar"],
+    "modules-right":["tray", "battery", "battery#bat2", "network", "clock"],
+    // Modules configuration
+
+        
+
+    //need nvidia driver I cannot be bothered atm
+    "custom/gpu_usage": {
+        "tooltip": false,
+	"format": "{}% ",
+	"interval": 1,
+	"exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv | grep -G [0-9] -o",
+    	"exec-if": "exit 0"
+    },
+    "custom/gpu_temp": {
+        "tooltip": true,
+	"format": " {}°C ",
+	"interval": 10,
+	"exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv | grep -G [0-9] -o | tr -d '\n'",
+    	"exec-if": "exit 0"
+    },
+    "custom/fan": {
+        "tooltip": false,
+	"format": "{}",
+	"interval": 1000,
+	"exec": "asusctl profile -p | grep -E 'Q|B|P' -o",
+    	"exec-if": "exit 0",
+        "on-click": "asusctl profile -n"
+	},
+    "custom/power": {
+        "tooltip": false,
+	"format": "{}",
+	"interval": 1,
+	"exec": "cat ~/.config/hypr/.script_state | grep -E 'Balanced|Powersave|Performance' -o",
+    	"exec-if": "exit 0",
+        "on-click": "~/.config/hypr/cpupowerscript.sh"
+	},
+	
+	"custom/refreshrate": {
+        "tooltip": false,
+	"format": "{} Hz",
+	"interval": 10,
+	"exec": "hyprctl monitors | grep -E '120.0|60.0' -o | grep -E '120|60' -o",
+    	"exec-if": "exit 0",
+	"on-click": "hyprctl monitors | grep \"0x0\" | grep \"@120\" && hyprctl keyword monitor ,1920x1200@60,auto,1 || hyprctl keyword monitor ,1920x1200@120,auto,1",
+	},
+
+
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": " {name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+     "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 24,
+        "icon-theme": "Star",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "on-click-right": "activate"
+    },
+   "sway/language": {
+    "format": " {}",
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "Australia/Hobart",
+        "format": "{:%a %d %m %Y  %r}",
+	"interval": 1
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}%"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C",
+        "format": "{temperatureC}°C"
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "Connected  ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click-right": "kitty nmtui"
+
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": "{icon} {format_source}",
+        "format-muted": "{format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+        "format": "  {}  ",
+        "return-type": "json",
+	"max-length": 20,
+        "escape": true,
+        "exec": "/usr/bin/python3 $HOME/.config/waybar/custom_modules/mediaplayer.py --player spotify",
+        "on-click": "playerctl play-pause"
+    },
+    "custom/launcher":{
+        "format": "",
+        "on-click": "wofi --show drun --location 1",
+        "on-click-right": "killall wofi"
+    },
+        "custom/kbd":{
+        "format": "",
+        "on-click": "~/.config/hypr/kbd.sh"
+    }
+
+}

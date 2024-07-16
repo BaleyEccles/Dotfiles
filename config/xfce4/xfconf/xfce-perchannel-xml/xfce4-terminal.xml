@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-terminal" version="1.0">
+  <property name="misc-cursor-shape" type="string" value="TERMINAL_CURSOR_SHAPE_BLOCK"/>
+  <property name="misc-copy-on-select" type="bool" value="false"/>
+  <property name="dropdown-width" type="uint" value="69"/>
+  <property name="dropdown-height" type="uint" value="55"/>
+  <property name="dropdown-opacity" type="uint" value="100"/>
+  <property name="dropdown-animation-time" type="uint" value="0"/>
+  <property name="dropdown-always-show-tabs" type="bool" value="true"/>
+  <property name="dropdown-show-borders" type="bool" value="false"/>
+  <property name="dropdown-position" type="uint" value="50"/>
+  <property name="dropdown-position-vertical" type="uint" value="0"/>
+  <property name="font-name" type="string" value="Iosevka Bold Expanded 12"/>
+  <property name="run-custom-command" type="bool" value="false"/>
+  <property name="custom-command" type="string" value=""/>
+  <property name="command-login-shell" type="bool" value="false"/>
+  <property name="use-default-working-dir" type="bool" value="false"/>
+  <property name="default-working-dir" type="string" value=""/>
+  <property name="font-use-system" type="bool" value="true"/>
+  <property name="cell-width-scale" type="double" value="1"/>
+  <property name="cell-height-scale" type="double" value="1"/>
+  <property name="background-mode" type="string" value="TERMINAL_BACKGROUND_SOLID"/>
+  <property name="background-darkness" type="double" value="0.38"/>
+  <property name="background-image-shading" type="double" value="0.90000000000000002"/>
+  <property name="misc-toolbar-default" type="bool" value="false"/>
+  <property name="misc-default-geometry" type="string" value="80x24"/>
+  <property name="color-bold-is-bright" type="bool" value="true"/>
+  <property name="color-foreground" type="string" value="#dcdcdc"/>
+  <property name="color-background" type="string" value="#2c2c2c"/>
+  <property name="color-background-vary" type="bool" value="false"/>
+  <property name="color-cursor-foreground" type="string" value=""/>
+  <property name="color-cursor" type="string" value="#dcdcdc"/>
+  <property name="color-cursor-use-default" type="bool" value="true"/>
+  <property name="color-selection" type="string" value=""/>
+  <property name="color-selection-background" type="string" value=""/>
+  <property name="color-selection-use-default" type="bool" value="true"/>
+  <property name="color-bold" type="string" value=""/>
+  <property name="color-bold-use-default" type="bool" value="true"/>
+  <property name="color-palette" type="string" value="#3f3f3f;#705050;#60b48a;#dfaf8f;#9ab8d7;#dc8cc3;#8cd0d3;#dcdcdc;#709080;#dca3a3;#72d5a3;#f0dfaf;#94bff3;#ec93d3;#93e0e3;#ffffff"/>
+  <property name="color-use-theme" type="bool" value="false"/>
+  <property name="tab-activity-color" type="string" value="#aa0000"/>
+</channel>

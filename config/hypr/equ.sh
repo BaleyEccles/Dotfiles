@@ -1,0 +1,1 @@
+= -- -b -fn 'Iosevka' -nb '#173f4f' -nf '#FFFFFF' -sb '#35B9AB' -sf '#FFFFFF'

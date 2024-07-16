@@ -1,0 +1,2 @@
+ERROR: Exception occurred: An error occurred while enabling: Zotero.jar: com.sun.star.registry.CannotRegisterImplementationException "Could not create Java implementation loader at /usr/src/debug/libreoffice-fresh/libreoffice-24.2.3.2/stoc/source/javaloader/javaloader.cxx:533" at /usr/src/debug/libreoffice-fresh/libreoffice-24.2.3.2/desktop/source/deployment/registry/dp_backend.cxx:668
+ERROR: unopkg failed.

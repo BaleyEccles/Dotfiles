@@ -1,0 +1,85 @@
+{
+    "packages": [
+        {
+            "current_version": "0.0",
+            "install_timestamp": 1711505058,
+            "package": {
+                "author": {
+                    "contact": {},
+                    "name": ""
+                },
+                "description": "",
+                "description_full": "",
+                "identifier": "com.github.pcbway.PCBWay-Plug-in-for-Kicad",
+                "license": "",
+                "name": "com_github_pcbway_PCBWay-Plug-in-for-Kicad",
+                "resources": {},
+                "type": "invalid",
+                "versions": [
+                    {
+                        "kicad_version": "8.0",
+                        "status": "stable",
+                        "version": "0.0"
+                    }
+                ]
+            },
+            "pinned": false,
+            "repository_id": "",
+            "repository_name": "<unknown>"
+        },
+        {
+            "current_version": "0.0",
+            "install_timestamp": 1711505056,
+            "package": {
+                "author": {
+                    "contact": {},
+                    "name": ""
+                },
+                "description": "",
+                "description_full": "",
+                "identifier": "com.gitlab.dennevi.Board2Pdf",
+                "license": "",
+                "name": "com_gitlab_dennevi_Board2Pdf",
+                "resources": {},
+                "type": "invalid",
+                "versions": [
+                    {
+                        "kicad_version": "8.0",
+                        "status": "stable",
+                        "version": "0.0"
+                    }
+                ]
+            },
+            "pinned": false,
+            "repository_id": "",
+            "repository_name": "<unknown>"
+        },
+        {
+            "current_version": "0.0",
+            "install_timestamp": 1711505055,
+            "package": {
+                "author": {
+                    "contact": {},
+                    "name": ""
+                },
+                "description": "",
+                "description_full": "",
+                "identifier": "org.openscopeproject.InteractiveHtmlBom",
+                "license": "",
+                "name": "org_openscopeproject_InteractiveHtmlBom",
+                "resources": {},
+                "type": "invalid",
+                "versions": [
+                    {
+                        "kicad_version": "8.0",
+                        "status": "stable",
+                        "version": "0.0"
+                    }
+                ]
+            },
+            "pinned": false,
+            "repository_id": "",
+            "repository_name": "<unknown>"
+        }
+    ]
+}
