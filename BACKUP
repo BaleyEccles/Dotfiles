@@ -6,6 +6,8 @@
       "http://melpa.org/packages/"))
 (package-initialize)
 
+
+;; Magit Test
 ;; Theme(s) ;;
 (load-theme 'wheatgrass t)
 (tool-bar-mode 0)
