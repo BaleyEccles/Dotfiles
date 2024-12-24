@@ -54,23 +54,8 @@
 (load-theme 'gruber-darker)
 (set-frame-parameter nil 'alpha-background 88)
 (add-to-list 'default-frame-alist '(alpha-background . 88))
-;(use-package doom-themes
-;  :ensure t
-;  :config
-;  ;; Global settings (defaults)
-;  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-;        doom-themes-enable-italic t) ; if nil, italics is universally disabled
-;  (load-theme 'doom-one t)
-;
-;  ;; Enable flashing mode-line on errors
-;  (doom-themes-visual-bell-config)
-;  ;; Enable custom neotree theme (all-the-icons must be installed!)
-;  (doom-themes-neotree-config)
-;  ;; or for treemacs users
-;  (setq doom-themes-treemacs-theme "doom-atom") ; use "doom-colors" for less minimal icon theme
-;  (doom-themes-treemacs-config)
-;  ;; Corrects (and improves) org-mode's native fontification.
-;  (doom-themes-org-config))
+(add-to-list 'default-frame-alist '(alpha 88 88))
+(set-frame-parameter (selected-frame) 'alpha '(88 88))
 
 
 ;; Indent ;;
@@ -175,7 +160,6 @@
 ;; Persistant Undo ;;
 (undohist-initialize)
 
-
 ;; Org roam ;;
 ;; C-M-j
 (use-package org-roam
@@ -220,11 +204,57 @@
 (setq org-edit-src-content-indentation 0)
 
 ;; Org Mode ;;
+
 (add-hook 'org-mode-hook 'org-indent-mode)
 
 ;; Org mode Latex ;;
 (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.9))
 
+;; Org mode Latex previews ;;
+
+(setq org-preview-latex-process-alist
+      '((dvipng :programs
+         ("latex" "dvipng")
+         :description "dvi > png" :message "you need to install the programs: latex and dvipng." :image-input-type "dvi" :image-output-type "png" :image-size-adjust
+         (1.0 . 1.0)
+         :latex-compiler
+         ("latex -interaction nonstopmode -output-directory %o %f")
+         :image-converter
+         ("dvipng -D %D -T tight -bg Transparent -o %O %f")
+         :transparent-image-converter
+         ("dvipng -D %D -T tight -bg Transparent -o %O %f"))
+ (dvisvgm :programs
+          ("latex" "dvisvgm")
+          :description "dvi > svg" :message "you need to install the programs: latex and dvisvgm." :image-input-type "dvi" :image-output-type "svg" :image-size-adjust
+          (1.7 . 1.5)
+          :latex-compiler
+          ("latex -interaction nonstopmode -output-directory %o %f")
+          :image-converter
+          ("dvisvgm %f --no-fonts --exact-bbox --scale=%S --output=%O"))
+ (imagemagick :programs
+              ("latex" "convert")
+              :description "pdf > png" :message "you need to install the programs: latex and imagemagick." :image-input-type "pdf" :image-output-type "png" :image-size-adjust
+              (1.0 . 1.0)
+              :latex-compiler
+              ("pdflatex -interaction nonstopmode -output-directory %o %f")
+              :image-converter
+              ("magick -density %D -trim -transparent-color '#181818' -antialias %f -quality 100 %O"))))
+(setq org-latex-preview-process 'dvipng)
+(defun my/org-image-transparent-background ()
+  "Add a transparent background to images in Org mode."
+  (when (org-in-item-p)
+    (let ((image (get-text-property (point) 'display)))
+      (when (and image (imagep image))
+        (let ((overlay (make-overlay (line-beginning-position) (line-end-position))))
+          (overlay-put overlay 'face '(:background "unspecified-bg")))))))
+
+(add-hook 'org-display-inline-images-hook 'my/org-image-transparent-background)
+;; org xournalpp ;;
+(straight-use-package
+ '(org-xopp :type git :host github :repo "mahmoodsh36/org-xopp" :files (:defaults "*.sh")))
+(with-eval-after-load 'org
+  (require 'org-xopp)
+  (org-xopp-setup))
 
 ;; Languages ;;
 ;; Octave ;;
@@ -232,3 +262,4 @@
 ;; Haskell ;;
 (add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
 
+(put 'set-goal-column 'disabled nil)
