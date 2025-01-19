@@ -107,27 +107,42 @@
 
 ;; LSP ;;
 ;; lsp-mode ;;
-(use-package lsp-mode
-  :init
-  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-  (setq lsp-keymap-prefix "C-c l")
-  :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-         (c++-mode     . lsp)
-	     (c-mode       . lsp)
-         (haskell-mode . lsp)
-	     (latex-mode   . lsp)
-         (lsp-mode     . lsp-enable-which-key-integration))
-  :commands lsp)
-;; lsp-ui ;;
-(use-package lsp-ui :commands lsp-ui-mode)
-;; lsp ivy ;;
-(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
-;; lsp which key ;;
-;; optional if you want which-key integration
-(use-package which-key
-    :config
-    (which-key-mode))
+;;(use-package lsp-mode
+;;  :init
+;;  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+;;  (setq lsp-keymap-prefix "C-c l")
+;;  :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+;;         (c++-mode     . lsp)
+;;	     (c-mode       . lsp)
+;;         (haskell-mode . lsp)
+;;	     (latex-mode   . lsp)
+;;         (lsp-mode     . lsp-enable-which-key-integration))
+;;  :commands lsp)
+;;;; lsp-ui ;;
+;;(use-package lsp-ui :commands lsp-ui-mode)
+;;;; lsp ivy ;;
+;;(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+;;(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+;;;; lsp which key ;;
+;;;; optional if you want which-key integration
+;;(use-package which-key
+;;    :config
+;;    (which-key-mode))
+
+;; eglot ;;
+(require 'eglot)
+;; c++ lsp ;;
+(add-hook 'c++-mode-hook 'eglot-ensure)
+(setq-default c-basic-offset 2)
+(setq-default c++-basic-offset 2)
+(define-key eglot-mode-map (kbd "C-c C-r") 'eglot-rename)
+(define-key eglot-mode-map (kbd "C-c C-j") 'eglot-inlay-hints-mode)
+
+
+
+;; prettier ;;
+;(setenv "NODE_PATH" "/usr/lib/node_modules")
+;(add-hook 'after-init-hook #'global-prettier-mode)
 
 ;; ivy ;;
 (setq ivy-use-selectable-prompt t)
