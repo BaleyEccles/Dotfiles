@@ -15,7 +15,7 @@ monitor=,1920x1200@120,auto,1
 
 # Execute your favorite apps at launch
 # & asusctl fan-curve -m Quiet -f cpu -D 30c:1%,49c:2%,54c:50%,69c:70%,79c:100%,89c:100%,99c:100%,109c:100% & asusctl fan-curve -m Quiet -f gpu -D 30c:1%,49c:2%,54c:50%,69c:70%,79c:100%,89c:100%,99c:100%,109c:100%
-exec-once = exec-once = hyprpm reload -n & /home/Baley/.config/hypr/wvkbd/wvkbd-Baley -L 300 & /home/Baley/.config/hypr/powertop.sh & udiski & LANG=C waybar & dunst & firefox & nm-applet & /usr/lib/polkit-kde-authentication-agent-1 & asusctl -c 60 & hyprpm enable hyprgrass & nwg-drawer -r & /home/Baley/.config/Wallpapers/mpvpaper.sh
+exec-once = exec-once = hyprpm reload -n & /home/Baley/.config/hypr/wvkbd/wvkbd-Baley -L 300 & /home/Baley/.config/hypr/powertop.sh & udiski & LANG=C waybar & dunst & firefox & nm-applet & /usr/lib/polkit-kde-authentication-agent-1 & asusctl -c 60 & hyprpm enable hyprgrass & nwg-drawer -r -nofs & /home/baley/.config/Wallpapers/mpvpaper.sh & /home/baley/.config/hypr/desktop-portal.sh
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
 
@@ -29,11 +29,12 @@ $fileManager = thunar
 env = XCURSOR_SIZE,24
 #env = QT_QPA_PLATFORMTHEME,qt5ct # change to qt6ct if you have that
 env = QT_QPA_PLATFORM,wayland
-env = QT_QPA_PLATFORMTHEME,qt5ct
+env = QT_QPA_PLATFORMTHEME,qt6ct
+#env = QT_STYLE_OVERRIDE,kvantum 
 
-env = XDG_SESSION_DESKTOP,KDE
-env = XDG_CURRENT_DESKTOP,KDE
-
+env = XDG_SESSION_DESKTOP,hyprland
+env = XDG_CURRENT_DESKTOP,hyprland
+env = WLR_DRM_NO_ATOMIC
 
 # Nvidia
 env = LIBVA_DRIVER_NAME,nvidia
@@ -194,7 +195,7 @@ bind = $mainMod, M, exec, $logout
 bind = $mainMod, N, exec, hyprlock
 bind = $mainMod, E, exec, $fileManager
 bind = $mainMod, V, togglefloating,
-bind = $mainMod, R, exec, nwg-drawer
+bind = $mainMod, R, exec, nwg-drawer -nofs
 bind = $mainMod, P, pseudo, # dwindle
 
 
