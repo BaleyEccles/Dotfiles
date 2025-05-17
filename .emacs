@@ -35,6 +35,10 @@
 (scroll-bar-mode -1)
 (global-display-line-numbers-mode 1)
 
+;; Stuff ;;
+(setq gc-cons-threshold (* 100 1024 1024))
+
+
 ;; Dashboard ;;
 (require 'dashboard)
 (dashboard-setup-startup-hook)
@@ -69,7 +73,7 @@
 (setq-default truncate-lines nil)
 
 ;; Font ;;
-(add-to-list 'default-frame-alist '(font . "Iosevka-15"))
+(add-to-list 'default-frame-alist '(font . "Iosevka-13"))
 
 ;; BINDS ;;
 ;; Compile ;;
@@ -105,6 +109,18 @@
 ;; Persistant ;;
 (straight-use-package 'prescient)
 
+;; Tree Sitter ;;
+;(use-package tree-sitter
+;  :ensure t
+;  :config
+;  (global-tree-sitter-mode)
+;  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+;(use-package tree-sitter-langs
+;  :ensure t)
+;; Disable auto tree-sitter mode
+;(add-hook 'c++-mode-hook #'tree-sitter-mode)
+
+
 ;; LSP ;;
 ;; lsp-mode ;;
 ;;(use-package lsp-mode
@@ -132,14 +148,20 @@
 ;; eglot ;;
 (require 'eglot)
 ;; c++ lsp ;;
+;; Disable auto eglot mode
 (add-hook 'c++-mode-hook 'eglot-ensure)
 (setq-default c-basic-offset 2)
 (setq-default c++-basic-offset 2)
 (define-key eglot-mode-map (kbd "C-c C-r") 'eglot-rename)
 (define-key eglot-mode-map (kbd "C-c C-j") 'eglot-inlay-hints-mode)
-
-
-
+;; latex lsp ;;
+(add-to-list 'eglot-server-programs '(latex-mode . ("digestif")))
+(add-hook 'latex-mode-hook 'eglot-ensure)
+;(add-to-list 'eglot-server-programs '(org-mode . ("digestif")))
+;(add-hook 'org-mode-hook 'eglot-ensure)
+;(add-hook 'org-mode-hook 'yas-minor-mode)
+;; Java lsp ;;
+(add-hook 'eglot-java-mode-hook 'eglot-ensure)
 ;; prettier ;;
 ;(setenv "NODE_PATH" "/usr/lib/node_modules")
 ;(add-hook 'after-init-hook #'global-prettier-mode)
@@ -161,6 +183,9 @@
 (setq ivy-prescient-enable-sorting 1)
 (prescient-persist-mode 1)
 (ivy-rich-mode)
+
+;; counsel imenu ;;
+(global-set-key (kbd "C-c i") 'counsel-imenu)
 
 ;; Company ;;
 (company-mode)
@@ -205,6 +230,7 @@
   (org-roam-setup))
 
 ;; Org babel ;;
+
 (setq org-confirm-babel-evaluate nil)
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -213,17 +239,32 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . nil)
+   (plantuml . t)
+   (C     . t)
+   (java     . t)
    (python     . t)
    (octave     . t)))
 
 (setq org-edit-src-content-indentation 0)
 
+;; Plant UML Org Babel ;;
+(setq plantuml-default-exec-mode 'plantuml)
+(setq ob-plantuml-plantuml-executable "plantuml")
+(setq org-plantuml-exec-mode 'plantuml)
+
 ;; Org Mode ;;
 
 (add-hook 'org-mode-hook 'org-indent-mode)
 
+(setq org-latex-pdf-process
+      '("xelatex -interaction nonstopmode -output-directory %o %f"
+        "xelatex -interaction nonstopmode -output-directory %o %f"))
+(setq org-latex-src-block-backend 'minted)
+(setq org-latex-figure-default-placement "[H]")
+
 ;; Org mode Latex ;;
-(setq org-format-latex-options (plist-put org-format-latex-options :scale 1.9))
+(setq org-format-latex-options (plist-put org-format-latex-options :scale 1.5))
+(add-hook 'org-mode-hook 'org-cdlatex-mode)
 
 ;; Org mode Latex previews ;;
 
@@ -272,9 +313,35 @@
   (org-xopp-setup))
 
 ;; Languages ;;
+(defun set-line-indent-4 ()
+  (setq c-basic-offset 4)
+  )
+(add-hook 'java-mode-hook 'set-line-indent-4)
+
+(c-add-style "my-java-style"
+             '("java"  ; base it on the built-in "java" style
+               (c-offsets-alist . ((substatement-open . 0)
+                                   (block-open        . 0)))))
+(add-hook 'java-mode-hook
+          (lambda () (c-set-style "my-java-style")))
+
+(add-hook 'octave-mode-hook 'set-line-indent-4)
 ;; Octave ;;
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
 ;; Haskell ;;
 (add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
 
 (put 'set-goal-column 'disabled nil)
+
+;; Arduino ;;
+(require 'cl)
+(autoload 'arduino-mode "arduino-mode" "Arduino editing mode." t)
+(add-to-list 'auto-mode-alist '("\.ino$" . arduino-mode))
+
+;; Hunspell ispell ;;
+(setq ispell-program-name "hunspell")
+(setq ispell-dictionary "en_AU")       ;; Set your desired dictionary
+(add-hook 'org-mode-hook 'flyspell-mode)
+
+;; Make the bar smaller ;;
+(set-face-attribute 'mode-line nil  :height 120)
